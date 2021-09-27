@@ -1,4 +1,4 @@
-package Drafts;
+package Lesson_3;
 
 public class HW_3 {
  // public static Random random = new Random();
