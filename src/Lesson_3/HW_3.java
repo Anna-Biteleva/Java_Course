@@ -135,11 +135,11 @@ System.out.println();
 
       int sumFull = 0;
       for (int i = 0; i < arrBal.length; i++){
-        sumFull = sumFull + arrBal[i];}
+        sumFull += arrBal[i];}
       int i =0;
       int summ = 0;
       while ((summ != sumFull-summ) && (i < arrBal.length)) {
-        summ = summ + arrBal[i];
+        summ += arrBal[i];
         i++;
       }
       return (summ != sumFull || sumFull == 0);}
