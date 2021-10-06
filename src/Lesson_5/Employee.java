@@ -22,17 +22,21 @@ public class Employee {
         this.age = age;
     }
 
-    public int getAge(){
-    return this.age;
+    public int getAge() {
+        return this.age;
     }
 
-        // 3. Внутри класса «Сотрудник» написать метод, который выводит информацию об объекте в консоль.
+    // 3. Внутри класса «Сотрудник» написать метод, который выводит информацию об объекте в консоль.
 
 
-        public String getData () {
-            return ("ФИО: " + this.fullName + ", Должность: " + this.position + ", email: " + this.email + ", Телефон: " + this.phone + ", Зарплата: " +
-                    this.salary + ", Возраст:" + this.age);
-        }
-
-
+    public String getData() {
+        return ("ФИО: " + this.fullName + ", Должность: " + this.position + ", email: " + this.email + ", Телефон: " + this.phone + ", Зарплата: " +
+                this.salary + ", Возраст:" + this.age);
     }
+}
+
+
+
+
+
+
