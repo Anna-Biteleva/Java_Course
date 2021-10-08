@@ -27,12 +27,12 @@ public class EmplList {
 
         // Вывод информации об объектах как элементах массива.
 
-        System.out.println (staff[0].getData());
+     /*   System.out.println (staff[0].getData());
         System.out.println (staff[1].getData());
         System.out.println (staff[2].getData());
         System.out.println (staff[3].getData());
         System.out.println (staff[4].getData());
-        System.out.println("******************");
+        System.out.println("******************");*/
 
         //5  Вывод информации о сотрудниках страше 40 лет
 
@@ -41,7 +41,11 @@ public class EmplList {
     }
 
     public static void ageEvaluation(Employee[] arr) {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++)
+            System.out.println(arr[i].getData());
+        System.out.println("******************");
+
+        for ( int i = 0; i < 5; i++) {
             if (arr[i].getAge() > 40)
                 System.out.println(arr[i].getData());
         }
