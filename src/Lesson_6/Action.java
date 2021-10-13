@@ -4,7 +4,7 @@ import java.util.Random;
 
 
 
-public class Action {
+public abstract class Action {
     public static int dogMaxRunDist = 700;
     public static int dogMinRunDist = 300;
     public static int dogMaxSwimDist = 15;

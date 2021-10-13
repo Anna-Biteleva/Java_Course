@@ -3,7 +3,7 @@ package Lesson_6;
 
 import java.util.Random;
 
-public class Animal {
+public abstract class Animal {
     protected int runLength;
     protected int swimLength;
     protected String name;
@@ -36,7 +36,7 @@ public class Animal {
         if (dist > swimLength)
             System.out.println( name + " смог проплыть только "  + swimLength+" из " + dist + " метров.");
         else {
-            System.out.println(name + " успешно проплыл " + dist + " метров.");
+            System.out.println( name + " успешно проплыл " + dist + " метров.");
         }
 
         }
