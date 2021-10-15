@@ -15,18 +15,8 @@ public class AppWindow extends JFrame {
     AppWindow(){
 
         setupWindow();
-
-        // Icon iconStart = new ImageIcon ("<a href='https://dryicons.com/free-icons/start'> Icon by Dryicons </a>");
-
-        // ImageIcon iconStart = new ImageIcon("start_icons.png");
-
-       /* JButton btnStart =new JButton( iconStart );
-        JButton btnStop =new JButton ("Stop game");
-        add(btnStart,BorderLayout.EAST);
-        add(btnStop, BorderLayout.WEST); */
-
-        map = new Map();
         controlPanel = new GuiPanel();
+        map = new Map(this);
         add(controlPanel, BorderLayout.EAST);
          add (map);
 
@@ -40,4 +30,9 @@ public class AppWindow extends JFrame {
         setAlwaysOnTop(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
+    void log(String msg){
+        controlPanel.recordLog(msg);
+    }
+
 }
+

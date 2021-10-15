@@ -1,6 +1,8 @@
 package Lesson_7.components;
 import javax.swing.*;
  import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class GuiPanel extends JPanel {
 
@@ -72,9 +74,24 @@ public class GuiPanel extends JPanel {
     private void setupAppControlArea() {
         appControlArea = new JPanel();
         appControlArea.setLayout(new GridLayout(2, 1));
-        // ImageIcon iconStart = new ImageIcon("start_icons.png");
-        JButton btnStart = new JButton("<html><font size = 10 color = green>  Start game </font> </html>");
-        JButton btnStop = new JButton("<html><font size =10 color = #800000 >  Stop game </font> </html>");
+        btnStart = new JButton("<html><font size = 10 color = green>  Start game </font> </html>");
+        btnStart.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                recordLog ("Start game");
+
+            }
+        } );
+
+        btnStop = new JButton("<html><font size =10 color = #800000 >  Stop game </font> </html>");
+        btnStop.addActionListener(new ActionListener() {
+                                       @Override
+                                       public void actionPerformed(ActionEvent e) {
+                                           System.exit(0);
+
+                                       }
+                                   }
+        );
         appControlArea.add(btnStart);
         appControlArea.add(btnStop);
 
@@ -85,16 +102,57 @@ public class GuiPanel extends JPanel {
         playerControlArea = new JPanel();
         playerControlArea.setLayout( new GridLayout(1,4));
         playerMoveUP = new JButton(" \uD83E\uDC81 ");
+
+        playerMoveUP.addActionListener(new ActionListener() {
+                                           @Override
+                                           public void actionPerformed(ActionEvent e) {
+                                               recordLog ("MoveUp action ");
+
+                                           }
+                                       }
+        );
+
         playerMoveDown = new JButton("\uD83E\uDC83" );
+
+        playerMoveDown.addActionListener(new ActionListener() {
+                                           @Override
+                                           public void actionPerformed(ActionEvent e) {
+                                               recordLog ("MoveDown action");
+
+                                           }
+                                      }
+        );
+
+
         playerMoveLeft = new JButton("\uD83E\uDC80");
+
+        playerMoveLeft.addActionListener(new ActionListener() {
+                                             @Override
+                                             public void actionPerformed(ActionEvent e) {
+                                                 recordLog ("MoveLeft action");
+
+                                             }
+                                         }
+        );
+
         playerMoveRight = new JButton("\uD83E\uDC82");
+
+        playerMoveRight.addActionListener(new ActionListener() {
+                                              @Override
+                                              public void actionPerformed(ActionEvent e) {
+                                                  recordLog ("MoveRight action");
+
+                                              }
+                                          }
+        );
+
         playerControlArea.add(playerMoveLeft);
         playerControlArea.add(playerMoveUP);
         playerControlArea.add(playerMoveDown);
         playerControlArea.add(playerMoveRight);
-
-
     }
+
+
 
     private void setupGameInfoArea() {
         gameInfoArea = new JPanel();
@@ -143,15 +201,17 @@ public class GuiPanel extends JPanel {
 
 
 
-
-
     private void setupGameLog() {
 
-        gameLog = new JTextArea(" Window for logs");
+        gameLog = new JTextArea("");
         scrollLogPanel = new JScrollPane(gameLog);
         gameLog.setLineWrap(true);
 
     }
 
+
+    void recordLog(String msg) {
+        gameLog.append(msg + "\n");
+    }
    }
 
