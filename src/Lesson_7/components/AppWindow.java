@@ -26,7 +26,7 @@ public class AppWindow extends JFrame {
         setLocation(winPositionX,winPositionY);
         setSize(winWidth,winHeight);
         setVisible(true);
-        setTitle("GUI_Interface");
+        setTitle("GUI_GAME");
         setAlwaysOnTop(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
