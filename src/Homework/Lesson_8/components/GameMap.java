@@ -1,8 +1,8 @@
-package Lesson_8.components;
+package Homework.Lesson_8.components;
 
-import Lesson_8.Tools;
-import Lesson_8.models.Enemy;
-import Lesson_8.models.Player;
+import Homework.Lesson_8.Tools;
+import Homework.Lesson_8.models.Enemy;
+import Homework.Lesson_8.models.Player;
 
 import javax.swing.*;
 import java.awt.*;
