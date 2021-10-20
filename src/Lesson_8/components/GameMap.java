@@ -7,7 +7,7 @@ import Lesson_8.models.Player;
 import javax.swing.*;
 import java.awt.*;
 
-public class GameMap extends JPanel {
+public class  GameMap extends JPanel {
 
     private AppWindow appWindow;
 
